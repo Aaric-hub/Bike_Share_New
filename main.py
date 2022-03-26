@@ -3,11 +3,9 @@ from flask import Flask, request, render_template
 from flask import Response
 import os
 from flask_cors import CORS, cross_origin
-from prediction_Validation_Insertion import pred_Validation
-from trainingModel import trainModel
-from training_Validation_Insertion import train_validation
+from trainingModel import trainModel,trainValidation
 import flask_monitoringdashboard as dashboard
-from predictFromModel import prediction
+from predictFromModel import prediction, prediction_validation
 
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
@@ -31,23 +29,23 @@ def predictRouteClient():
             print(file_name)
             file.save(f"Recived_file/{file_name}")
             path = f"Recived_file/{file_name}"
-            pred_val = pred_Validation(path=path)
+            pred_val = prediction_validation(path=path)
             print("pred_val done")
             pred = prediction(path=path)
             print("prediction done")
-            path,predictions = pred.predictionFromModel()
-            return render_template('index.html',prediction_output=f"Prediction File Created:: {path} \n Predictions are :: {predictions}")
+            #path,predictions = pred.predictionFromModel()
+            return render_template('index.html',prediction_output=f"Prediction File Created \n Predictions are :: {preds}")
         elif request.method == 'POST' and request.files:
             file = request.files['File']
             file_name = file.filename
             file.save(f"Recived_file/{file_name}")
             path = f"Recived_file/{file_name}"
-            pred_val = pred_Validation(path)
-            pred_val.prediction_validation()
+            pred_val = prediction_validation(path)
+            
             pred = prediction(path)
 
-            path,predictions = pred.predictionFromModel()
-            return render_template('index.html',prediction_output=f"Prediction File Created:: {path} \n Predictions are :: {predictions}")
+            #path,predictions = pred.predictionFromModel()
+            return render_template('index.html',prediction_output=f"Prediction File Created \n Predictions are :: {pred}")
         else:
             print('Nothing Matched..')
 
@@ -63,11 +61,11 @@ def predictRouteClient():
 
 def trainRouteClient():
     try:
-        folder_path = 'Training_File'
+        folder_path = 'Training_File/day.csv'
         if folder_path is not None:
             path = folder_path
-            train_val = train_validation(path)
-            train_val.train_validation()
+            train_val = trainValidation(path)
+            
 
             train_model = trainModel()
             train_model.trainingModel()

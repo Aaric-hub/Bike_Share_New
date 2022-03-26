@@ -1,0 +1,21 @@
+{"SampleFileName": "day.csv",
+ "NumberOfColumns": 16,
+ "ColName": {
+  "instant": "Integer",
+  "dteday": "object",
+  "season": "Integer",
+  "yr": "Integer",
+  "mnth": "Integer",
+  "holiday": "Integer",
+  "weekday": "Integer",
+  "workingday": "Integer",
+  "weathersit": "Integer",
+  "temp": "float",
+  "atemp": "float",
+  "hum": "float",
+  "windspeed": "float",
+  "casual": "Integer",
+  "registered": "Integer",
+  "cnt": "Integer"
+ }
+}
