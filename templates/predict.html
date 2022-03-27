@@ -17,6 +17,7 @@
 
 </head>
 
+
 <body>
 
     <!-- As a heading -->
@@ -31,55 +32,24 @@
     <br><br><br>
 
     <div class="container">
-
-        <form action="\file" method="post" enctype="multipart/form-data">
+        <form action="\predict" method="post">
             <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Upload File</h5>
+                            <h5 class="card-title">Prediction File</h5>
                             <!-- Departure -->
-                            <input type="file" name="File" class="form-control" autocomplete="off" id="Submit File" required="required">
-                            
-                    </div>
-                    <input type="submit" value="Upload" class="btn btn-info" style="height:50px; width:100px">
-                </div>
-                <br>
-                <br>
-                <br>
-                {{output}}
-            </form>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-
-
-        
-
-        <form action="\train" method="post">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Train model</h5>
-                            <!-- Departure -->
+                            <input type="submit" value="Predict" class="btn btn-info" style="height:50px; width:100px">
                         </div>
                     </div>
                 </div>
                 <br>
                 <br>
                 <br>
-                <input type="submit" value="Train Model" class="btn btn-info" style="height:50px; width:100px">
             </div>
-            {{ train_output }}
             <br>
+            {{ prediction_output }}
         </form>
-
         <br>
         <br>
         <br>

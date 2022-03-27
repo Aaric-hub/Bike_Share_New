@@ -37,9 +37,7 @@ def file():
 def predict():
     try:
         if request.method == 'POST' or request.method == 'GET':
-            for i in os.listdir('Recived_file'):
-                if i!='Bad_file':
-                    file = i
+            file = 'day.csv'
             #self.log.log(self.file_object,"-----------Prediction validation entered-------")
             p = prediction_validation(file=file)
             p.prediction_val()
@@ -48,7 +46,7 @@ def predict():
             pp = prediction(file=file)
             pp.predictFromModel()
             #self.log.log(self.file_object,"-----------Prediction exited-------")
-        return render_template('index.html', prediction_output = "Prediction done successfuly and prediction file saved at :: Prediction_output/Predictions.csv")
+            return render_template('predict.html', prediction_output = "Prediction done successfuly and prediction file saved at :: Prediction_output/Predictions.csv")
         
     except Exception as e:
             #self.log.log(self.file_object,f"<<<<Error occured :: {e}>>>>")
