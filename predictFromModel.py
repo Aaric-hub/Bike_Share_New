@@ -168,7 +168,7 @@ class prediction_validation(object):
                             if (len(csv[columns]) - csv[columns].count()) == len(csv[columns]):
                                 count+=1 
                                 shutil.move(file,'Recived_file/Bad_file')
-                                self.log.log(self.file_object,f"{file} moved to Recived_file/Bad_file, missing all values in a column...")
+                                self.log.log(self.file_object,f"{file} moved to Bad_file, missing all values in a column...")
                 self.log.log(self.file_object,"Missing values in column validation completed successfully..")
             except Exception as e:
                 self.log.log(self.file_object,f"Failed to validate column's missing values:: {e}")

@@ -1,0 +1,7 @@
+2022-03-28/02:41:44		<<<<<<Prediction validation started...>>>>>>
+2022-03-28/02:41:44		Data from schema loaded
+2022-03-28/02:41:44		validating column names
+2022-03-28/02:41:44		validating file names completed successfully
+2022-03-28/02:41:44		validating if any column has all values missing
+2022-03-28/02:41:44		Missing values in column validation completed successfully..
+2022-03-28/02:41:44		prediction validation complted successfully

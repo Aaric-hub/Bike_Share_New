@@ -186,11 +186,12 @@ class trainValidation(object):
             try:
                 self.log.log(self.file_object, "<<<<<<Column validation started...>>>>>>")
                 for file in listdir('Training_Files/Good_files'):
-                    csv = pd.read_csv(f"Training_Files/Good_files/{file}")
-                    if csv.shape[1] == NumberOfColumns:
-                        pass
-                    else:
-                        shutil.move(file,'Training_Files/Bad_files')
+                    if file.endswith(f'.csv'):
+                        csv = pd.read_csv(f"Training_Files/Good_files/{file}")
+                        if csv.shape[1] == NumberOfColumns:
+                            pass
+                        else:
+                            shutil.move(file,'Training_Files/Bad_files')
 
                 self.log.log(self.file_object, "<<<<<<Column validation finished...>>>>>>")
             except Exception as e:

@@ -1,0 +1,46 @@
+2022-03-28/02:28:32		<<<<Training Started>>>>
+2022-03-28/02:28:32		<<<<<<<  Doing Preprocessing  >>>>>>
+2022-03-28/02:28:32		<<<< Columns removed from the data... >>>>
+2022-03-28/02:28:32		<<<<Converting numerical values to ctegorical...>>>>
+2022-03-28/02:28:32		<<<<Converted numerical values to ctegorical...>>>>
+2022-03-28/02:28:32		<<<<Creating dummy variables...>>>>
+2022-03-28/02:28:32		<<<<Dummy data created successfully...>>>>
+2022-03-28/02:28:32		<<<<Droping columns for which dummys are created...>>>>
+2022-03-28/02:28:32		<<<<Dropped columns for which dummy variables were created...>>>>
+2022-03-28/02:28:32		<<<<Creating train and test datasets...>>>>
+2022-03-28/02:28:32		<<<<Train Test Data Created....>>>>
+2022-03-28/02:28:32		<<<<Scaling the data started...>>>>
+2022-03-28/02:28:32		<<<<Data Scaled Successfully...>>>>
+2022-03-28/02:28:32		<<<<Crating X and Y training data...>>>>
+2022-03-28/02:28:32		<<<<x_train and y_train created...>>>>
+2022-03-28/02:28:32		<<<<Linear Regression function initiated...>>>>
+2022-03-28/02:28:32		<<<<LinerRegression fit done...>>>>
+2022-03-28/02:28:32		<<<<<<RFE fit done...>>>>>>
+2022-03-28/02:28:32		<<<<Constant added...>>>>
+2022-03-28/02:28:32		<<<<Creating first fitted model...>>>>
+2022-03-28/02:28:32		<<<<Created First Model....>>>>
+2022-03-28/02:28:32		<<<<Saving the model...>>>>
+2022-03-28/02:28:32		<<<<Error occured at trainModel :: [Errno 2] No such file or directory: 'models/model.pkl'>>>>
+2022-03-28/02:29:50		<<<<Training Started>>>>
+2022-03-28/02:29:50		<<<<<<<  Doing Preprocessing  >>>>>>
+2022-03-28/02:29:50		<<<< Columns removed from the data... >>>>
+2022-03-28/02:29:50		<<<<Converting numerical values to ctegorical...>>>>
+2022-03-28/02:29:50		<<<<Converted numerical values to ctegorical...>>>>
+2022-03-28/02:29:50		<<<<Creating dummy variables...>>>>
+2022-03-28/02:29:50		<<<<Dummy data created successfully...>>>>
+2022-03-28/02:29:50		<<<<Droping columns for which dummys are created...>>>>
+2022-03-28/02:29:50		<<<<Dropped columns for which dummy variables were created...>>>>
+2022-03-28/02:29:50		<<<<Creating train and test datasets...>>>>
+2022-03-28/02:29:50		<<<<Train Test Data Created....>>>>
+2022-03-28/02:29:50		<<<<Scaling the data started...>>>>
+2022-03-28/02:29:50		<<<<Data Scaled Successfully...>>>>
+2022-03-28/02:29:50		<<<<Crating X and Y training data...>>>>
+2022-03-28/02:29:50		<<<<x_train and y_train created...>>>>
+2022-03-28/02:29:50		<<<<Linear Regression function initiated...>>>>
+2022-03-28/02:29:50		<<<<LinerRegression fit done...>>>>
+2022-03-28/02:29:50		<<<<<<RFE fit done...>>>>>>
+2022-03-28/02:29:50		<<<<Constant added...>>>>
+2022-03-28/02:29:50		<<<<Creating first fitted model...>>>>
+2022-03-28/02:29:50		<<<<Created First Model....>>>>
+2022-03-28/02:29:50		<<<<Saving the model...>>>>
+2022-03-28/02:29:50		<<<<Model Saved successfully at :: models/model.pkl>>>>

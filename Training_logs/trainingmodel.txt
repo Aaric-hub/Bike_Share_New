@@ -1,0 +1,11 @@
+2022-03-28/02:29:50		<<<<<< Train Validation Started >>>>>>
+2022-03-28/02:29:50		<<<<Schema File loaded and data extracted...>>>>
+2022-03-28/02:29:50		<<<<Creating manual regex...>>>>
+2022-03-28/02:29:50		<<<<Created manual regex...>>>>
+2022-03-28/02:29:50		<<<<<< Filename Validation Started...>>>>>>
+2022-03-28/02:29:50		Error occured while validating... :: Destination path 'Training_Files/Good_files\day.csv' already exists
+2022-03-28/02:29:50		<<<<<<Column validation started...>>>>>>
+2022-03-28/02:29:50		<<<<<<Column validation finished...>>>>>>
+2022-03-28/02:29:50		<<<<<<Missing value check started...>>>>>>
+2022-03-28/02:29:50		Missing value replacing with NULL
+2022-03-28/02:29:50		<<<<Missing value replaced...>>>>

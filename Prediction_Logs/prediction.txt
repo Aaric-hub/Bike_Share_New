@@ -1,0 +1,17 @@
+2022-03-28/02:41:44		<<<<<<Start of Prediction>>>>>>>
+2022-03-28/02:41:44		<<<<<<Data Recived>>>>>>
+2022-03-28/02:41:44		<<<<<<Preprocessing Started>>>>>>>
+2022-03-28/02:41:44		<<<<<<Columns Dropped>>>>>>
+2022-03-28/02:41:44		<<<<<<Converting numerical values to ctegorical>>>>>>
+2022-03-28/02:41:44		<<<<<<Converting numerical values to ctegorical completed>>>>>>
+2022-03-28/02:41:44		<<<<<<<<<<Creating dummy>>>>>>>>>>
+2022-03-28/02:41:44		<<<<Dummy data created...>>>>
+2022-03-28/02:41:44		<<<<Columns removed for which dummy were created...>>>>
+2022-03-28/02:41:44		<<<<<<Creating train and test data>>>>>>
+2022-03-28/02:41:44		<<<<Train and test data created successfully>>>>
+2022-03-28/02:41:44		<<<<<<Scaling of the data started...>>>>>>
+2022-03-28/02:41:44		<<<<Sclaing done Successfully...>>>>
+2022-03-28/02:41:44		<<<<Creating x and y datasets...>>>>
+2022-03-28/02:41:44		<<<<x and y datasets created successfully...>>>>
+2022-03-28/02:41:44		<<<<<Model loaded successfully...>>>>
+2022-03-28/02:41:44		<<<<<< Prediction file saved at Prediction_output/Predictions.csv>>>>>>>
