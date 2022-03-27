@@ -3,10 +3,16 @@ from predictFromModel import prediction_validation,prediction
 import os
 import pandas as pd
 from application_logger import logging
+import flask_monitoringdashboard as dashboard
 from flask import Flask, request, render_template, redirect
-from flask_cors import cross_origin
+from flask_cors import cross_origin, CORS
+
+os.putenv('LANG', 'en_US.UTF-8')
+os.putenv('LC_ALL', 'en_US.UTF-8')
 
 app = Flask(__name__)
+dashboard.bind(app)
+CORS(app)
 
 @app.route('/',methods=['GET'])
 @cross_origin()

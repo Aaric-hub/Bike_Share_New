@@ -111,7 +111,7 @@ class prediction(object):
             x_test = sm.add_constant(x_test)
             test_cols = x_test.columns
             #x_test = x_test[test_cols[1:]]
-            print(x_test.columns)
+            #print(x_test.columns)
             result = list(model.predict(x_test))
             result_ = pd.DataFrame(list(zip(result)),columns=['Predictions'])
             path = 'Prediction_output/Predictions.csv'
