@@ -17,7 +17,7 @@ class prediction(object):
     def __init__(self,file):
         self.log = logging.App_Logger()
         self.file_object = open("Prediction_Logs/prediction.txt","a+")
-        self.file = file
+        self.file = f"Recived_file/{file}"
         self.model = pickle.load(open('models/model.pkl','rb'))
 
     def predictFromModel(self):
@@ -140,33 +140,6 @@ class prediction_validation(object):
             no_of_col = dic['NumberOfColumns']
             col_names = dic['ColName']
             self.log.log(self.file_object,"Data from schema loaded")
-
-            regex = "['day']+\.csv"
-
-            # validating file names 
-            """try:
-                self.log.log(self.file_object,"validating file names")
-                files = [f for f in os.listdir('Recived_file')]
-                for file in files:
-                    if file != 'Bad_file':
-                        if (re.match(regex,file)) == True:
-                            if (file.endswith('.csv')):
-                                if file.split('.csv')[0] == pattern:
-                                    pass
-                                else:
-                                    shutil.move(file,'Recived_file/Bad_file')
-                                    self.log.log(self.file_object,f"{file} moved to Recived_file/Bad_file")
-                            else:
-                                self.log.log(self.file_object,f"{file} moved to Recived_file/Bad_file")
-                                shutil.move(file,'Recived_file/Bad_file')
-                        else:
-                            shutil.move(file,'Recived_file/Bad_file')
-                            self.log.log(self.file_object,f"{file} moved to Recived_file/Bad_file")
-                            
-                self.log.log(self.file_object,"validating file names completed successfully")
-            except Exception as e:
-                self.log.log(self.file_object,f"Error occured while validating file names :: {e}")
-                raise Exception"""
 
             # Validating Columns
             try:
