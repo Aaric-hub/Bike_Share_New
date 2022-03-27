@@ -36,7 +36,7 @@ def file():
 @cross_origin()
 def predict():
     try:
-        if request.method == 'POST':
+        if request.method == 'POST' or request.method == 'GET':
             for i in os.listdir('Recived_file'):
                 if i!='Bad_file':
                     file = i
