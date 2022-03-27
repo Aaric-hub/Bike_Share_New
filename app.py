@@ -36,18 +36,19 @@ def file():
 @cross_origin()
 def predict():
     try:
-        for i in os.listdir('Recived_file'):
-            if i!='Bad_file':
-                file = i
+        if request.method == 'POST':
+            for i in os.listdir('Recived_file'):
+                if i!='Bad_file':
+                    file = i
             #self.log.log(self.file_object,"-----------Prediction validation entered-------")
-        p = prediction_validation(file=file)
-        p.prediction_val()
+            p = prediction_validation(file=file)
+            p.prediction_val()
             #self.log.log(self.file_object,"-----------Prediction validation exited-------")
             #self.log.log(self.file_object,"-----------Prediction entered-------")
-        pp = prediction(file=file)
-        pp.predictFromModel()
+            pp = prediction(file=file)
+            pp.predictFromModel()
             #self.log.log(self.file_object,"-----------Prediction exited-------")
-        return render_template('index.html', prediction_output = "Prediction done successfuly and prediction file saved at :: Prediction_output/Predictions.csv")
+            return render_template('index.html', prediction_output = "Prediction done successfuly and prediction file saved at :: Prediction_output/Predictions.csv")
     except Exception as e:
             #self.log.log(self.file_object,f"<<<<Error occured :: {e}>>>>")
         raise Exception
@@ -56,14 +57,15 @@ def predict():
 @cross_origin()
 def train(file='day.csv'):
     try:
+        if request.method == 'POST':
             #self.log.log(self.file_object,"-----------Training started----------")
-        t_val = trainValidation(file=file)
-        t_val.train_validation()
+            t_val = trainValidation(file=file)
+            t_val.train_validation()
             #self.log.log(self.file_object,"-----------Training validation exited-------")
-        t_train = trainModel()
-        t_train.trainingModel()
+            t_train = trainModel()
+            t_train.trainingModel()
             #self.log.log(self.file_object,"-----------Training model exited-------")
-        return render_template('index.html',train_output = "Model saved at models directory...")
+            return render_template('index.html',train_output = "Model saved at models directory...")
     except Exception as e:
             #self.log.log(self.file_object,f"Error in train :: {e}")
         raise Exception
