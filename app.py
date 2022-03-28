@@ -46,9 +46,9 @@ def predict():
             pp = prediction(file=file)
             pp.predictFromModel()
             #self.log.log(self.file_object,"-----------Prediction exited-------")
-            response = {}
-            response["MESSAGE"] = "Prediction file created..."
-            return jsonify(response)
+            #response = {}
+            #response["MESSAGE"] = "Prediction file created..."
+            return render_template('index.html', prediction_output = "Prediction file created at :: Prediction_output/Predictions.csv")
         
     except Exception as e:
             #self.log.log(self.file_object,f"<<<<Error occured :: {e}>>>>")

@@ -56,7 +56,24 @@
             <br>
             <br>
             <br>
-
+                <form action="\predict" method="post">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prediction File</h5>
+                                    <!-- Departure -->
+                                    <input type="submit" value="Predict" class="btn btn-info" style="height:50px; width:100px">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <br>
+                    {{ prediction_output }}
+                </form>
 
 
         
