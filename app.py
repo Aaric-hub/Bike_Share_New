@@ -4,7 +4,7 @@ import os
 import pandas as pd
 from application_logger import logging
 import flask_monitoringdashboard as dashboard
-from flask import Flask, request, render_template, redirect, make_response
+from flask import Flask, request, render_template, redirect, make_response,jsonify
 from flask_cors import cross_origin, CORS
 
 os.putenv('LANG', 'en_US.UTF-8')
@@ -46,7 +46,9 @@ def predict():
             pp = prediction(file=file)
             pp.predictFromModel()
             #self.log.log(self.file_object,"-----------Prediction exited-------")
-            return render_template('predict.html')
+            response = {}
+            response["MESSAGE"] = "Prediction file created..."
+            return jsonify(response)
         
     except Exception as e:
             #self.log.log(self.file_object,f"<<<<Error occured :: {e}>>>>")
