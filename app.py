@@ -26,7 +26,7 @@ def file():
         if request.method == 'POST' and request.files:
                 #self.log.log(self.file_object,f"File recived...")
             file = request.files['File']
-            file.save(f"Bike_Share_New/Recived_file/{file.filename}")
+            file.save(f"Recived_file/{file.filename}")
                #self.log.log(self.file_object,f"Files saved..")
             return render_template('index.html', output = f"{file.filename} \t File uploaded successfuly...")
     except Exception as e:
