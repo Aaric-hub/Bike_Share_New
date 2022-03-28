@@ -31,7 +31,7 @@ A Linear regression model is used in this project.
   https://github.com/Aaric-hub/Bike_Share_New/blob/master/Training_Files/Good_files/day.csv
 
 ### YouTube:
-  https://www.youtube.com/channel/UCjbcMueYNOie25Kp0_pQIcA
+  https://youtu.be/-NgwID2Xg1Y
 
 ### LinkedIn:
   www.linkedin.com/in/biswajit-mohapatro
